@@ -10138,7 +10138,7 @@ exports.locate = locate;
     </form>
   </div>
   <script>
-    function resetForm() {
+    function resetForm(event) {
       resultStr = '';
       for (i=1; i <=7; ++i) {
         laneEl = docuemnt.getElementById("lane"+i);
@@ -10151,6 +10151,9 @@ exports.locate = locate;
       }
 
       window.alert(resultStr);
+
+      // Do not submit the form
+      event.preventDefault();
     }
 
     var formEl = document.getElementById("form1");
