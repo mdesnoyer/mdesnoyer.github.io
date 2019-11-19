@@ -10106,35 +10106,35 @@ exports.locate = locate;
           <td>Container</td>
         </tr>
         <tr>
-          <td><input id="lane1" size=9 autofocus=True></td>
-          <td><input id="container1" size=16></td>
+          <td><input id="lane1" size=9 tabIndex=0 autofocus=True></td>
+          <td><input id="container1" size=16 tabIndex=1></td>
         </tr>
         <tr>
-          <td><input id="lane2" size=9></td>
-          <td><input id="container2" size=16></td>
+          <td><input id="lane2" size=9 tabIndex=2></td>
+          <td><input id="container2" size=16 tabIndex=3></td>
         </tr>
         <tr>
-          <td><input id="lane3" size=9></td>
-          <td><input id="container3" size=16></td>
+          <td><input id="lane3" size=9 tabIndex=4></td>
+          <td><input id="container3" size=16 tabIndex=5></td>
         </tr>
         <tr>
-          <td><input id="lane4" size=9></td>
-          <td><input id="container4" size=16></td>
+          <td><input id="lane4" size=9 tabIndex=6></td>
+          <td><input id="container4" size=16 tabIndex=7></td>
         </tr>
         <tr>
-          <td><input id="lane5" size=9></td>
-          <td><input id="container5" size=16></td>
+          <td><input id="lane5" size=9 tabIndex=8></td>
+          <td><input id="container5" size=16 tabIndex=9></td>
         </tr>
         <tr>
-          <td><input id="lane6" size=9></td>
-          <td><input id="container6" size=16></td>
+          <td><input id="lane6" size=9 tabIndex=10></td>
+          <td><input id="container6" size=16 tabIndex=11></td>
         </tr>
         <tr>
-          <td><input id="lane7" size=9></td>
-          <td><input id="container7" size=16></td>
+          <td><input id="lane7" size=9 tabIndex=12></td>
+          <td><input id="container7" size=16 tabIndex=13></td>
         </tr>
       </table>
-      <input type="submit" id="submitBut" value="Submit">
+      <input type="submit" id="submitBut" value="Submit" tabIndex=14>
     </form>
   </div>
   <script>
@@ -10215,6 +10215,7 @@ exports.locate = locate;
           outputData.parentElement.hidden = false;
           outputData.innerText = code.data;
           if (code.data !== lastQRFound) {
+            document.activeElement.value = code.data;
             lastQRFound = code.data;
             advanceFocus();
           }
